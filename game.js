@@ -3,6 +3,7 @@ const cards = document.querySelectorAll('.memory-card');
 const reset = document.querySelectorAll('.reset-card');
 
 
+
 let hasFlippedCard = false;
 let lockCard = false;
 let firstCard, secondCard;
