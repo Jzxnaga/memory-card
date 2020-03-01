@@ -15,14 +15,15 @@ function flipCard() {
   this.classList.add('flip');
 
   if (!hasFlippedCard) {
-    // first click
+    
     hasFlippedCard = true;
     firstCard = this;
 
     return;
   }
 
-  console.log(FlippedCard)
+  // console.log(FlippedCard)
+
   secondCard = this;
 
   checkForMatch();
@@ -34,12 +35,18 @@ function checkForMatch() {
   isMatch ? disableCards() : unflipCards();
 }
 
+
+
+
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
 
   resetBoard();
 }
+
+
+
 
 function unflipCards() {
   lockCard = true;
@@ -51,6 +58,10 @@ function unflipCards() {
     resetBoard();
   }, 1000);
 }
+
+
+
+
 
 function resetBoard() {
   [hasFlippedCard, lockCard] = [false, false];
@@ -75,10 +86,6 @@ function resetCard() {
 
   
 }
-
-
-
-
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
