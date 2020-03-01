@@ -21,7 +21,7 @@ function flipCard() {
     return;
   }
 
-  // second click
+  console.log(FlippedCard)
   secondCard = this;
 
   checkForMatch();
@@ -48,7 +48,7 @@ function unflipCards() {
     secondCard.classList.remove('flip');
 
     resetBoard();
-  }, 800);
+  }, 1000);
 }
 
 function resetBoard() {
@@ -56,19 +56,19 @@ function resetBoard() {
   [firstCard, secondCard] = [null, null];
 }
 
-// (function shuffle() {
-//   cards.forEach(card => {
-//     let randomPos = Math.floor(Math.random() * 12);
-//     card.style.order = randomPos;
-//   });
-// })();
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
 
 function resetCard() {
   
   this.classList.add('flip');
   setTimeout(() => {
  location.reload()
-  }, 900);
+  }, 1000);
 
 
 
